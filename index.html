@@ -23,40 +23,87 @@
   li { margin-bottom: 8px; }
   a { color: var(--oro); }
   footer { border-top: 1px solid var(--bordo); color: var(--tenue); font-size: 13px; text-align: center; padding: 20px 22px 30px; }
+  html[lang="it"] main [lang="en"], html[lang="en"] main [lang="it"], html[lang="it"] footer [lang="en"], html[lang="en"] footer [lang="it"] { display: none; }
+  .lingue { display: flex; gap: 6px; justify-content: flex-end; margin-bottom: 18px; }
+  .lingue button { font: inherit; font-size: 14px; color: var(--tenue); background: none; border: 1px solid var(--bordo); border-radius: 8px; padding: 5px 12px; cursor: pointer; }
+  .lingue button[aria-pressed="true"] { color: #1b1404; background: var(--oro); border-color: var(--oro); font-weight: 600; }
 </style>
 </head>
 <body>
 <main>
+  <div class="lingue" role="group" aria-label="Lingua / Language">
+    <button data-lingua="it">Italiano</button><button data-lingua="en">English</button>
+  </div>
   <h1>🎬 CineDiario</h1>
-  <p class="sotto">Segna i film che hai visto e sblocca traguardi.</p>
 
-  <a class="scarica" id="scarica" href="CineDiario.exe">Scarica per Windows</a>
-  <p class="nota">Gratuito · Windows 10 e 11 · circa 55 MB · nessuna installazione</p>
+  <div lang="it">
+    <p class="sotto">Segna i film che hai visto e sblocca traguardi.</p>
+    <a class="scarica" href="CineDiario.exe">Scarica per Windows</a>
+    <p class="nota">Gratuito · Windows 10 e 11 · circa 55 MB · nessuna installazione · interfaccia in italiano e inglese</p>
 
-  <h2>Cosa fa</h2>
-  <div class="carte">
-    <div class="carta"><b>Schede complete</b><span>Locandina, trama in italiano, regista e attori di ogni film.</span></div>
-    <div class="carta"><b>Visti e da vedere</b><span>Con data, voto da 1 a 10 e note personali.</span></div>
-    <div class="carta"><b>Categorie</b><span>Thriller, azione, horror, anime e tutte le altre, con medaglie.</span></div>
-    <div class="carta"><b>Traguardi</b><span>Da «Primo ciak» a «Mito del cinema», più le sfide speciali.</span></div>
+    <h2>Cosa fa</h2>
+    <div class="carte">
+      <div class="carta"><b>Schede complete</b><span>Locandina, trama, regista e attori di ogni film.</span></div>
+      <div class="carta"><b>Visti e da vedere</b><span>Con data, voto da 1 a 10 e note personali.</span></div>
+      <div class="carta"><b>Categorie</b><span>Thriller, azione, horror, anime e tutte le altre, con medaglie.</span></div>
+      <div class="carta"><b>Traguardi</b><span>Da «Primo ciak» a «Mito del cinema», più le sfide speciali.</span></div>
+    </div>
+
+    <h2>Come si usa</h2>
+    <ol>
+      <li>Scarica <b>CineDiario.exe</b> e fai doppio clic. Se Windows mostra «PC protetto da Windows», scegli <b>Ulteriori informazioni</b> e poi <b>Esegui comunque</b>: l'avviso compare perché l'app non ha una firma digitale a pagamento.</li>
+      <li>Si aprono una finestra nera (va lasciata aperta) e il browser con l'app.</li>
+      <li>Crea un account gratuito su <a href="https://www.themoviedb.org" target="_blank" rel="noopener">themoviedb.org</a>, richiedi la tua chiave in <b>Impostazioni → API</b> e incollala nell'app. Si fa una volta sola.</li>
+      <li>Cerca un film, aprilo e aggiungilo alla tua lista.</li>
+    </ol>
+    <p class="nota">I tuoi film restano solo sul tuo PC, nella cartella Documenti\CineDiario.</p>
   </div>
 
-  <h2>Come si usa</h2>
-  <ol>
-    <li>Scarica <b>CineDiario.exe</b> e fai doppio clic. Se Windows mostra «PC protetto da Windows», scegli <b>Ulteriori informazioni</b> e poi <b>Esegui comunque</b>: l'avviso compare perché l'app non ha una firma digitale a pagamento.</li>
-    <li>Si aprono una finestra nera (va lasciata aperta) e il browser con l'app.</li>
-    <li>Crea un account gratuito su <a href="https://www.themoviedb.org" target="_blank" rel="noopener">themoviedb.org</a>, richiedi la tua chiave in <b>Impostazioni → API</b> e incollala nell'app. Si fa una volta sola.</li>
-    <li>Cerca un film, aprilo e aggiungilo alla tua lista.</li>
-  </ol>
-  <p class="nota">I tuoi film restano solo sul tuo PC, nella cartella Documenti\CineDiario.</p>
+  <div lang="en">
+    <p class="sotto">Log the movies you've watched and unlock achievements.</p>
+    <a class="scarica" href="CineDiario.exe">Download for Windows</a>
+    <p class="nota">Free · Windows 10 and 11 · about 55 MB · no installation · interface in Italian and English</p>
+
+    <h2>What it does</h2>
+    <div class="carte">
+      <div class="carta"><b>Full movie pages</b><span>Poster, plot, director and cast for every movie.</span></div>
+      <div class="carta"><b>Watched and to watch</b><span>With date, 1–10 rating and personal notes.</span></div>
+      <div class="carta"><b>Genres</b><span>Thriller, action, horror, anime and all the others, with medals.</span></div>
+      <div class="carta"><b>Achievements</b><span>From “First Take” to “Cinema Icon”, plus special challenges.</span></div>
+    </div>
+
+    <h2>How to use it</h2>
+    <ol>
+      <li>Download <b>CineDiario.exe</b> and double-click it. If Windows shows “Windows protected your PC”, choose <b>More info</b> and then <b>Run anyway</b>: the warning appears because the app has no paid digital signature.</li>
+      <li>A black window opens (keep it open), followed by your browser with the app.</li>
+      <li>Create a free account on <a href="https://www.themoviedb.org" target="_blank" rel="noopener">themoviedb.org</a>, request your key under <b>Settings → API</b> and paste it into the app. You only do this once.</li>
+      <li>Search for a movie, open it and add it to your list.</li>
+    </ol>
+    <p class="nota">Your movies stay on your PC only, in the Documents\CineDiario folder.</p>
+  </div>
 </main>
-<footer>App amatoriale e non commerciale. Dati e immagini dei film forniti da TMDB. Questo prodotto usa l'API di TMDB ma non è approvato né certificato da TMDB.</footer>
+<footer>
+  <span lang="it">App amatoriale e non commerciale. Dati e immagini dei film forniti da TMDB. Questo prodotto usa l'API di TMDB ma non è approvato né certificato da TMDB.</span>
+  <span lang="en">Non-commercial hobby app. Movie data and images provided by TMDB. This product uses the TMDB API but is not endorsed or certified by TMDB.</span>
+</footer>
 <script>
-  // Su GitHub Pages (utente.github.io/progetto) il pulsante punta all'ultima versione pubblicata tra le "Releases".
+  // Su GitHub Pages (utente.github.io/progetto) i pulsanti puntano all'ultima versione pubblicata tra le "Releases".
   var m = location.hostname.match(/^(.+)\.github\.io$/);
   var progetto = location.pathname.split('/')[1];
-  if (m && progetto) document.getElementById('scarica').href =
-    'https://github.com/' + m[1] + '/' + progetto + '/releases/latest/download/CineDiario.exe';
+  if (m && progetto) document.querySelectorAll('.scarica').forEach(function (a) {
+    a.href = 'https://github.com/' + m[1] + '/' + progetto + '/releases/latest/download/CineDiario.exe';
+  });
+
+  function lingua(l) {
+    document.documentElement.lang = l;
+    document.title = l === 'en' ? 'CineDiario - your watched movies diary' : 'CineDiario - il diario dei film che hai visto';
+    document.querySelectorAll('[data-lingua]').forEach(function (b) { b.setAttribute('aria-pressed', b.dataset.lingua === l); });
+    try { localStorage.setItem('cinediario-lingua', l); } catch (e) {}
+  }
+  var salvata = null;
+  try { salvata = localStorage.getItem('cinediario-lingua'); } catch (e) {}
+  lingua(salvata === 'it' || salvata === 'en' ? salvata : ((navigator.language || 'it').toLowerCase().indexOf('it') === 0 ? 'it' : 'en'));
+  document.querySelectorAll('[data-lingua]').forEach(function (b) { b.addEventListener('click', function () { lingua(b.dataset.lingua); }); });
 </script>
 </body>
 </html>
